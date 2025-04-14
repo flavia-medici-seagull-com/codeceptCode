@@ -27,4 +27,5 @@ Given(/^The user has installed a driver on the system$/, function () {
     I.click("//Button[@Name='Next >']")
     I.click("//Button[@Name='Next >']")
     I.click("//Button[@Name='Finish']")
+
 });

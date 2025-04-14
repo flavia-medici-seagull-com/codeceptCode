@@ -8,4 +8,17 @@ declare namespace CodeceptJS {
   namespace Translation {
     interface Actions { }
   }
+  interface REST extends Helper {
+    sendGetRequest(url: string): Promise<any>;
+    sendPostRequest(url: string, payload: any): Promise<any>;
+    sendPutRequest(url: string, payload: any): Promise<any>;
+    sendDeleteRequest(url: string): Promise<any>;
+    haveRequestHeaders(headers: Record<string, string>): void;
+  }
+
+  interface I extends WithTranslation<REST> {}
+
+  interface SupportObject {
+    I: I
+  }
 }
